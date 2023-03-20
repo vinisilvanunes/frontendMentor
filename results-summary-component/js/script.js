@@ -15,7 +15,6 @@ function showInfo(datas){
         statsIcon[i].src = datas[i].icon
         statsTitle[i].innerText = datas[i].category
         statsScore[i].innerText = datas[i].score
-        statsScore[i].appendChild(statsMax[i])
         statsMax[i].innerText = "/100"
         sum += datas[i].score
     }
