@@ -94,6 +94,9 @@ footer{
 
 
 @media(max-width: 600px){
+    body{
+        background: var(--bgColor) url("../images/bg-mobile.svg") center no-repeat;
+    }
     main{
         flex-direction: column;
         
