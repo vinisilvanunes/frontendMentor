@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+
+:root{
+    --bgColor: hsl(257, 40%, 49%);
+    --activeColor: hsl(300, 69%, 71%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}   
+
+body{
+    background: var(--bgColor) url(../images/bg-desktop.svg) center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "content"
+    "buttons";
+}
+
+header{
+    grid-area: header;
+    padding: 25px 25px
+}
+
+header img{
+    width: 200px;
+}
+
+main{
+    grid-area: content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main img{
+   width: 40vw;
+}
+
+main div{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 40vw;
+}
+
+main h2{
+    font-family: 'Poppins', sans-serif;
+}
+
+main button{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+}
+
+button:hover{
+    background-color: var(--activeColor);
+    color: white
+}
+
+footer{
+    grid-area: buttons;
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px 100px;
+    gap: 15px;
+}
+
+.icon{
+    color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    height: 25px;
+    width: 25px;
+    padding: 10px;
+}
+
+.icon:hover{
+    color: var(--activeColor);
+    border: 1px solid var(--activeColor)
+}
+
+
+@media(max-width: 600px){
+    main{
+        flex-direction: column;
+        
+    }
+    main img{
+        width: 80vw;
+    }
+    main div{
+        width: 80vw;
+        align-items: center;
+        justify-content: center;
+    }
+    footer{
+        justify-content: center;
+    }
+}
